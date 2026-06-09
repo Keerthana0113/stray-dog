@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dog Profile | Smart Stray Dog Monitoring</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    min-height:100vh;
+    color:white;
+    padding:20px;
+}
+
+.container{
+    max-width:500px;
+    margin:auto;
+}
+
+/* Header */
+
+.profile{
+    position:relative;
+    border-radius:30px;
+    overflow:hidden;
+    box-shadow:0 20px 40px rgba(0,0,0,.4);
+}
+
+.profile img{
+    width:100%;
+    height:340px;
+    object-fit:cover;
+    display:block;
+}
+
+.overlay{
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    padding:25px;
+    background:linear-gradient(
+    transparent,
+    rgba(0,0,0,.9));
+}
+
+.overlay h1{
+    font-size:2rem;
+}
+
+.overlay p{
+    opacity:.8;
+}
+
+/* Status */
+
+.status{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+
+.badge{
+    padding:10px 16px;
+    border-radius:50px;
+    font-size:.8rem;
+    font-weight:600;
+}
+
+.green{
+    background:#16a34a;
+}
+
+.blue{
+    background:#2563eb;
+}
+
+.orange{
+    background:#f59e0b;
+}
+
+/* Cards */
+
+.card{
+    margin-top:20px;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:24px;
+    padding:20px;
+}
+
+.card-title{
+    font-size:1.1rem;
+    margin-bottom:15px;
+    font-weight:600;
+}
+
+.info-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.info-box{
+    background:rgba(255,255,255,.05);
+    padding:15px;
+    border-radius:15px;
+}
+
+.info-box span{
+    display:block;
+    font-size:.8rem;
+    opacity:.7;
+}
+
+.info-box h3{
+    margin-top:5px;
+}
+
+/* Map */
+
+.map{
+    height:250px;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.map iframe{
+    width:100%;
+    height:100%;
+    border:none;
+}
+
+/* Emergency */
+
+.emergency-btn{
+    width:100%;
+    margin-top:20px;
+    border:none;
+    padding:18px;
+    border-radius:20px;
+    background:#ef4444;
+    color:white;
+    font-size:1rem;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.emergency-btn:hover{
+    transform:translateY(-3px);
+}
+
+.footer{
+    text-align:center;
+    margin-top:25px;
+    opacity:.6;
+    font-size:.8rem;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Profile -->
+
+    <div class="profile">
+
+        <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=1000&q=80">
+
+        <div class="overlay">
+            <h1>Rocky 🐕</h1>
+            <p>Dog ID: SDM-001</p>
+        </div>
+
+    </div>
+
+    <!-- Status -->
+
+    <div class="status">
+
+        <div class="badge green">
+            Healthy
+        </div>
+
+        <div class="badge blue">
+            Vaccinated
+        </div>
+
+        <div class="badge orange">
+            GPS Active
+        </div>
+
+    </div>
+
+    <!-- Dog Details -->
+
+    <div class="card">
+
+        <div class="card-title">
+            Dog Information
+        </div>
+
+        <div class="info-grid">
+
+            <div class="info-box">
+                <span>Breed</span>
+                <h3>Indian Pariah</h3>
+            </div>
+
+            <div class="info-box">
+                <span>Age</span>
+                <h3>3 Years</h3>
+            </div>
+
+            <div class="info-box">
+                <span>Gender</span>
+                <h3>Male</h3>
+            </div>
+
+            <div class="info-box">
+                <span>Last Seen</span>
+                <h3>2 Min Ago</h3>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Location -->
+
+    <div class="card">
+
+        <div class="card-title">
+            Live Location
+        </div>
+
+        <div class="map">
+
+            <iframe
+            src="https://maps.google.com/maps?q=13.0827,80.2707&z=15&output=embed">
+            </iframe>
+
+        </div>
+
+    </div>
+
+    <!-- Contact -->
+
+    <div class="card">
+
+        <div class="card-title">
+            Rescue Contact
+        </div>
+
+        <p>
+            If the dog appears injured or lost,
+            please contact the rescue team immediately.
+        </p>
+
+        <button class="emergency-btn">
+            📞 Call Rescue Team
+        </button>
+
+    </div>
+
+    <div class="footer">
+        Smart Stray Dog Monitoring System
+    </div>
+
+</div>
+
+</body>
+</html>
